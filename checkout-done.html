@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Back to SG Baddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <div class="brand">🏸 SG Baddy</div>
+      <h1>Taking you back to the app…</h1>
+    </div>
+  </header>
+  <main>
+    <div class="card">
+      <p>If nothing happens, tap the button below.</p>
+      <p><a id="open" href="sgbaddy://" style="display:inline-block;background:#15191D;color:#fff;padding:0.8rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:600;">Open SG Baddy</a></p>
+    </div>
+  </main>
+  <script>
+    // Stripe Checkout can only redirect to https, so this page relays the
+    // browser into the app. ?to=game/<uuid> (validated) deep-links straight
+    // to the game that was just paid for.
+    var to = new URLSearchParams(location.search).get('to') || '';
+    if (!/^game\/[0-9a-f-]{36}$/.test(to)) to = '';
+    var target = 'sgbaddy://' + to;
+    document.getElementById('open').setAttribute('href', target);
+    location.href = target;
+  </script>
+</body>
+</html>
