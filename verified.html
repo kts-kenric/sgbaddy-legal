@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Email verified — SG Baddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <div class="brand">🏸 SG Baddy</div>
+      <h1>Email verified ✓</h1>
+    </div>
+  </header>
+  <main>
+    <div class="card">
+      <p>Your email is confirmed — you're ready to play.</p>
+      <p>Open SG Baddy on your phone and sign in.</p>
+      <p><a id="open" href="sgbaddy://" style="display:inline-block;background:#15191D;color:#fff;padding:0.8rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:600;">Open SG Baddy</a></p>
+    </div>
+  </main>
+  <script>
+    // On a phone, bounce straight into the app; on desktop the success
+    // message stands on its own (the sgbaddy:// attempt is a silent no-op).
+    if (/iPhone|iPad|Android/i.test(navigator.userAgent)) {
+      location.href = 'sgbaddy://';
+    }
+  </script>
+</body>
+</html>
