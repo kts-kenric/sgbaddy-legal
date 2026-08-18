@@ -4,22 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Email verified — SG Baddy</title>
+  <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="inner">
-      <div class="brand">🏸 SG Baddy</div>
-      <h1>Email verified ✓</h1>
+      <div class="brand"><a href="index.html"><img src="favicon.png" alt="">SG BADDY</a></div>
     </div>
   </header>
-  <main>
+  <main class="state">
     <div class="card">
-      <p>Your email is confirmed — you're ready to play.</p>
-      <p>Open SG Baddy on your phone and sign in.</p>
-      <p><a id="open" href="sgbaddy://" style="display:inline-block;background:#15191D;color:#fff;padding:0.8rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:600;">Open SG Baddy</a></p>
+      <div class="big">✓</div>
+      <h2>Email verified</h2>
+      <p>You're ready to play. Open SG Baddy on your phone and sign in.</p>
+      <p><a id="open" class="btn" href="sgbaddy://">Open SG Baddy</a></p>
     </div>
   </main>
+  <footer>
+    <div class="inner">
+      <span>© 2026 SG Baddy · Singapore</span>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </footer>
   <script>
     // On a phone, bounce straight into the app; on desktop the success
     // message stands on its own (the sgbaddy:// attempt is a silent no-op).
